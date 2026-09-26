@@ -265,7 +265,7 @@ def set_all_location_rules(world: ReplayleeWorld) -> None:
     )
     set_rule(
         world.get_location("TT - Pagie Piece 1"),
-        lambda state: has_all_moves(state, ["High Jump", "Glide"], world.player),
+        lambda state: has_all_moves(state, ["High Jump", "Glide", "Tail Twirl"], world.player),
     )
     set_rule(
         world.get_location("TT - Pagie Piece 5"),
@@ -273,7 +273,7 @@ def set_all_location_rules(world: ReplayleeWorld) -> None:
     )
     set_rule(
         world.get_location("TT - Pagie Piece 8"),
-        lambda state: has_all_moves(state, ["High Jump", "Cloud Yooka", "Sonar Shot"], world.player),
+        lambda state: has_all_moves(state, ["High Jump", "Cloud Yooka", "Sonar Shot", "Tail Twirl"], world.player),
     )
     set_rule(
         world.get_location("TT - Dino Score"),
