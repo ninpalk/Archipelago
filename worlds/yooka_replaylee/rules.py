@@ -133,6 +133,22 @@ def set_all_location_rules(world: ReplayleeWorld) -> None:
         lambda state: state.has("Ground Pound", world.player),
     )
     set_rule(
+        world.get_location("HT - Rextro (Bronze)"),
+        lambda state: state.has("Progressive Pagie Door", world.player, 1),
+    )
+    set_rule(
+        world.get_location("HT - Rextro (Silver)"),
+        lambda state: state.has("Progressive Pagie Door", world.player, 1),
+    )
+    set_rule(
+        world.get_location("HT - Rextro (Gold)"),
+        lambda state: state.has("Progressive Pagie Door", world.player, 1),
+    )
+    set_rule(
+        world.get_location("HT - Secret Shelves"),
+        lambda state: state.has("Progressive Pagie Door", world.player, 2),
+    )
+    set_rule(
         world.get_location("HT - Downwards Dash"),
         lambda state: state.has("Roll", world.player),
     )
@@ -198,47 +214,59 @@ def set_all_location_rules(world: ReplayleeWorld) -> None:
     )
     set_rule(
         world.get_location("HT - Wind Test"),
-        lambda state: has_all_moves(state, ["Roll", "Wheel Spin Attack"], world.player),
+        lambda state: has_all_moves(state, ["Roll", "Wheel Spin Attack", "Air Bubble", "Tongue Grapple Hook", "Cloud Yooka"], world.player),
     )
     set_rule(
         world.get_location("HT - Slide Ride"),
-        lambda state: state.has("Ground Pound", world.player),
+        lambda state: has_all_moves(state, ["Roll", "Air Bubble", "Tongue Grapple Hook", "Cloud Yooka", "Ground Pound"], world.player),
     )
     set_rule(
         world.get_location("HT - Page Turner"),
-        lambda state: state.has("Tongue Grapple Hook", world.player),
+        lambda state: has_all_moves(state, ["Roll", "Air Bubble", "Tongue Grapple Hook", "Cloud Yooka"], world.player),
     )
     set_rule(
         world.get_location("HT - Booksmart"),
-        lambda state: state.has("Tongue Grapple Hook", world.player),
+        lambda state: has_all_moves(state, ["Roll", "Air Bubble", "Tongue Grapple Hook", "Cloud Yooka"], world.player),
     )
     set_rule(
         world.get_location("HT - Sentry Skipper"),
-        lambda state: state.has("Cloud Yooka", world.player),
+        lambda state: has_all_moves(state, ["Roll", "Air Bubble", "Tongue Grapple Hook", "Cloud Yooka"], world.player),
     )
     set_rule(
         world.get_location("HT - Container Tower"),
-        lambda state: state.has("Tail Twirl", world.player),
+        lambda state: has_all_moves(state, ["Roll", "Air Bubble", "Tongue Grapple Hook", "Cloud Yooka", "Tail Twirl"], world.player),
     )
     set_rule(
         world.get_location("HT - Poison Protection"),
-        lambda state: has_all_moves(state, ["Roll", "Cloud Yooka"], world.player),
+        lambda state: has_all_moves(state, ["Roll", "Cloud Yooka"], world.player),        
     )
     set_rule(
         world.get_location("HT - Rocky Rumble"),
-        lambda state: state.has("Ground Pound", world.player),
+        lambda state: state.has("Ground Pound", world.player),       
     )
     set_rule(
         world.get_location("HT - Maestro Managed"),
-        lambda state: state.has("Ground Pound", world.player),
+        lambda state: state.has("Ground Pound", world.player),        
     )
     set_rule(
         world.get_location("HT - Camera Shy"),
-        lambda state: state.has("Invisibility", world.player),
+        lambda state: state.has("Invisibility", world.player),       
     )
     set_rule(
         world.get_location("HT - Wind Test"),
-        lambda state: has_all_moves(state, ["Roll", "Wheel Spin Attack"], world.player),
+        lambda state: has_all_moves(state, ["Roll", "Wheel Spin Attack", "Air Bubble", "Tongue Grapple Hook", "Cloud Yooka"], world.player),
+    )
+    set_rule(
+        world.get_location("HT - Blasting Block"),
+        lambda state: state.has("Roll", world.player),
+    )
+    set_rule(
+        world.get_location("HT - Coineleus' Climb"),
+        lambda state: has_all_moves(state, ["Roll", "Air Bubble", "Tongue Grapple Hook", "Cloud Yooka"], world.player),
+    )
+    set_rule(
+        world.get_location("HT - Head Case"),
+        lambda state: has_all_moves(state, ["Roll", "Air Bubble", "Tongue Grapple Hook", "Cloud Yooka", "Glide"], world.player),
     )
     # --------------------------------------------------------
     # Tribalstack Tropics
@@ -353,11 +381,11 @@ def set_all_location_rules(world: ReplayleeWorld) -> None:
     )
     set_rule(
         world.get_location("TT - Target Time"),
-        lambda state: has_all_moves(state, ["Cloud Yooka", "Elemental Fruits"], world.player),
+        lambda state: has_all_moves(state, ["Cloud Yooka", "Elemental Fruits", "High Jump"], world.player),
     )
     set_rule(
         world.get_location("TT - Sideways Shuffle"),
-        lambda state: has_all_moves(state, ["Sonar Shot", "Glide", "High Jump"], world.player),
+        lambda state: has_all_moves(state, ["Sonar Shot", "Glide", "High Jump", "Tongue Grapple Hook"], world.player),
     )
     set_rule(
         world.get_location("TT - Noisy Note"),
@@ -472,7 +500,7 @@ def set_all_location_rules(world: ReplayleeWorld) -> None:
     )
     set_rule(
         world.get_location("GlGl - Glacial Glide"),
-        lambda state: has_all_moves(state, ["Roll", "Glide"], world.player),
+        lambda state: has_all_moves(state, ["Roll", "Glide", "Ground Pound"], world.player),
     )
     set_rule(
         world.get_location("GlGl - Blowie Bother"),
@@ -1870,7 +1898,7 @@ def set_all_location_rules(world: ReplayleeWorld) -> None:
     )   
         set_rule(
         world.get_location("GlGl - Quill 35"),
-        lambda state: has_all_moves(state, ["Roll", "Cloud Yooka"], world.player),
+        lambda state: has_all_moves(state, ["Roll", "Cloud Yooka", "High Jump"], world.player),
     )   
         set_rule(
         world.get_location("GlGl - Quill 37"),
@@ -1898,7 +1926,7 @@ def set_all_location_rules(world: ReplayleeWorld) -> None:
     )   
         set_rule(
         world.get_location("GlGl - Quill 53"),
-        lambda state: has_all_moves(state, ["Roll", "Cloud Yooka"], world.player),
+        lambda state: has_all_moves(state, ["Roll", "Cloud Yooka", "High Jump"], world.player),
     )   
         set_rule(
         world.get_location("GlGl - Quill 54"),
@@ -2014,7 +2042,7 @@ def set_all_location_rules(world: ReplayleeWorld) -> None:
     )
         set_rule(
         world.get_location("GlGl - Quill 106"),
-        lambda state: has_all_moves(state, ["Roll", "Cloud Yooka"], world.player),
+        lambda state: has_all_moves(state, ["Roll", "Cloud Yooka", "High Jump"], world.player),
     )
         set_rule(
         world.get_location("GlGl - Quill 107"),
@@ -2050,7 +2078,7 @@ def set_all_location_rules(world: ReplayleeWorld) -> None:
     )
         set_rule(
         world.get_location("GlGl - Quill 123"),
-        lambda state: has_all_moves(state, ["Roll", "Cloud Yooka"], world.player),
+        lambda state: has_all_moves(state, ["Roll", "Cloud Yooka", "High Jump"], world.player),
     )
         set_rule(
         world.get_location("GlGl - Quill 124"),
